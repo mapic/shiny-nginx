@@ -1,3 +1,3 @@
 # shiny-nginx.docker
 
-https://github.com/mapic/shiny.docker-compose
+Please see https://github.com/mapic/shiny for usage instructions.
