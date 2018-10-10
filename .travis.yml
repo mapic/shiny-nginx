@@ -1,0 +1,9 @@
+
+language: generic
+services:
+  - docker
+install:
+  - docker build -t mapic/shiny-nginx:latest . > /dev/null
+script:
+  - docker run -d --name nginx mapic/shiny-nginx:latest nginx -t
+
