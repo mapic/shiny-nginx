@@ -5,5 +5,5 @@ services:
 install:
   - docker build -t mapic/shiny-nginx:latest . > /dev/null
 script:
-  - docker run -d --name nginx mapic/shiny-nginx:latest nginx -t
+  - docker run -d mapic/shiny-nginx:latest nginx -t
 
