@@ -7,6 +7,7 @@ LABEL repository="https://github.com/mapic/shiny-nginx.docker"
 RUN echo "deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/sources.list
 RUN apt-get update -y
 RUN apt-get install -y python-certbot-nginx -t stretch-backports
+RUN apt-get upgrade -y
 
 # create html folder for certbot
 RUN mkdir -p /var/www/html
