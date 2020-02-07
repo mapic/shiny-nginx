@@ -15,6 +15,7 @@ create_certs () {
         --non-interactive
 
     # move certificates
+    echo "Moving certificates..."
     cp /etc/letsencrypt/live/$CERTBOT_DOMAIN/fullchain.pem /home/ssl/fullchain.pem
     cp /etc/letsencrypt/live/$CERTBOT_DOMAIN/privkey.pem /home/ssl/privkey.pem
 
@@ -24,6 +25,7 @@ create_certs () {
 }
 
 create_diffie () {
+    echo "Creating Diffie..."
     openssl dhparam -out /home/ssl/dhparams.pem 2048
 }
 
@@ -40,6 +42,7 @@ fi
 
 
 # add cronjob
+echo "Starting NGINX..."
 
 # start nginx
 nginx -c /etc/nginx/nginx.conf
